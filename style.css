@@ -28,16 +28,18 @@ header{
 .typing-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* بدل space-between */
+  justify-content: flex-start;
   gap: 30px;
-  padding: 150px 100px 150px 80px; /* top right bottom left */
+  padding: 100px 30px;
   background-color: #000016;
   flex-wrap: wrap;
+  min-height: 120vh; /* ✅ ده اللي بيكبر الخلفية */
 }
 
 .typing-wrapper {
-  flex: 1;
-  max-width: 50%;
+  flex: 1 1 100%;
+  max-width: 100%;
+  min-width: 280px;
 }
 
 .typing {
@@ -49,21 +51,62 @@ header{
   overflow: hidden;
   width: 0;
   max-width: 100%;
-  animation: typing 6s steps(45) infinite, blink 0.8s step-end infinite, float 5s ease-in-out infinite;
+  animation: typing 6s steps(45) infinite, blink 0.8s step-end infinite;
+}
+
+.static-line {
+  font-size: 20px;
+  color: #aaa;
+  margin-top: 10px;
 }
 
 .typing-image {
-  flex: 1;
-  max-width: 40%;
+  flex: 1 1 100%;
+  max-width: 100%;
   text-align: center;
-  margin-left: 60px;
+  margin-top: 30px;
 }
 
 .typing-image img {
-  width: 100%;
-  max-width: 300px;
+  width: 80%;
+  max-width: 250px;
+  height: auto;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes typing {
+  0%   { width: 0; }
+  50%  { width: 50ch; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .typing-container {
+    flex-wrap: nowrap;
+    padding: 120px 80px;
+  }
+
+  .typing-wrapper {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .typing-image {
+    flex: 1 1 40%;
+    max-width: 40%;
+    margin-top: 0;
+  }
+
+  .typing-image img {
+    width: 100%;
+  }
 }
 
 /* ==== Animations ==== */
