@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+      font-family: "Poppins", sans-serif;
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+}
+
+header{
+    background-color: #000016;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+.static-text {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.typing-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* بدل space-between */
+  gap: 30px;
+  padding: 150px 100px 150px 80px; /* top right bottom left */
+  background-color: #000016;
+  flex-wrap: wrap;
+}
+
+.typing-wrapper {
+  flex: 1;
+  max-width: 50%;
+}
+
+.typing {
+  font-size: 28px;
+  font-weight: 500;
+  color: #3a6cf4;
+  white-space: nowrap;
+  border-right: 2px solid #3a6cf4;
+  overflow: hidden;
+  width: 0;
+  max-width: 100%;
+  animation: typing 6s steps(45) infinite, blink 0.8s step-end infinite, float 5s ease-in-out infinite;
+}
+
+.typing-image {
+  flex: 1;
+  max-width: 40%;
+  text-align: center;
+  margin-left: 60px;
+}
+
+.typing-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* ==== Animations ==== */
+
+@keyframes typing {
+  0%   { width: 0; }
+  50%  { width: 50ch; } /* عدد الحروف */
+  100% { width: 0; }
+}
+
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+
+.logo {
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.navigation a{
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    padding-left: 30px;
+}
+.navigation a:hover {
+    color: rebeccapurple;
+}
+section{
+padding: 100px;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/pngtree-artificial-intelligence-sci-fi-illustration-background-picture-image_2380566.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main{
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500px;
+}
+.main h2 span {
+    display:inline-block;
+    margin-top: 10px;
+    color: #4e9eff;
+    font-size: 2em;
+    font-weight: 600px;
+}
+.main h3 {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-button{
+    color: #fff;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 0.6em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em  2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+transition: 0.5s ease;
+}
+.main-button:hover{
+    background-color: #0a49f6;
+    transform: scale(1.1);
+
+}
+.social-icons a {
+    color: #fff;
+    font-size: 1.3em;
+    padding-right: 30px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.Content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.5s ease;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+
+}
+
+.icon{
+    color: #3a6cf4;
+    font-size: 7em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.Projects {
+    background-color: #000016;
+}
+
+.Projects .Content {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.Projects-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    width: 14em;             
+    height: 14em;            
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Projects-card:hover {
+    transform: scale(1.03);
+}
+
+.Projects-card:hover .Projects-image {
+    opacity: 0.95;
+}
+
+.Projects-image.image-eid img {
+    width: 120%;
+    height: 3em;
+    margin-left: -10%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s;
+}
+
+.Projects-image.image-eid img:hover {
+    transform: scale(1.05);
+}
+
+.Projects-image.image-construction img {
+    width: 97%;
+    height: 7em;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px dashed #999;
+    background-color: #f0f0f0;
+    transition: opacity 0.3s;
+}
+
+.Projects-image.image-construction img:hover {
+    opacity: 0.8;
+}
+
+.Projects-info {
+    padding: 0.7em;
+}
+
+.Projects-category {
+    font-size: 0.75em;
+    color: #000;
+}
+
+.Projects-title {
+    display: flex;
+}
+
+.about-me-section {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px 20px;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #3a6cf4;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.expandable-list {
+  list-style: decimal;
+  padding-left: 20px;
+  color: #3a6cf4;
+}
+
+.expandable-list li {
+  margin-bottom: 15px;
+}
+
+.about-me-toggle {
+  background: none;
+  border: none;
+  color: #3a6cf4;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 8px;
+  transition: all 0.3s ease;   /* ✅ حركة ناعمة */
+}
+
+.about-me-toggle:hover {
+  color: #000016;              /* ✅ تغيير اللون */
+  transform: translateX(10px); /* ✅ تحرك يمين */
+}
+
+.about-me-content {
+  background-color: #1c1c2b;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: none;
+  font-size: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+  background-color: #000016;
+  color: #fff;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.footer-title span {
+  color: #3a6cf4;
+}
+
+.footer .social-icons a {
+  font-size: 1.3em;
+  padding: 0 12px 0 0;
+}
+
+@media (max-width:1023px) {
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px; 
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+    .main-content h3{
+font-size: 1.6em;
+    }
+    .Content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media (max-width: 641px){
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3{
+font-size: 1.4em;
+    }
+
+}
+@media (max-width: 300px){
+    body{
+        font-size: 10px;
+    }
+}
